@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ENSUREQUIZ2016</title>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="initial-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="css/animate.css">    
+  <link rel="stylesheet" type="text/css" href="css/style.css">  
+  
+  <script src="js/jquery-1-11-2.min.js"></script>
+  <script src="js/fastclick.js"></script>  
+  
+</head>
+
+<body ontouchmove='blockMove()'>
+  
+  <div class="wrapper">
+    
+    <div class="page" bsq-id="1" style="display: none;" onclick="nextBUTTON()">      
+      
+      <div class="background" style="background: url('img/ELE_01_03.png')"></div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">
+      
+      <img class='animated fadeIn' id="ele_01_01" src="img/ELE_01_01.png" style="position: absolute;top: 60px;right: 50px;z-index: 1;">
+      <img id="ele_logo" src="img/LOGO_ABBOTT.png" style="position: absolute;top: 30px;left: 40px;z-index: 1;">
+      
+      <img class='animated fadeIn delay1s' src="img/ELE_01_04.png" style="position: absolute;left: 670px;top: 200px; z-index: 9;" > 
+    </div>
+    
+    <div class='page' bsq-id='2'>
+      <div class='background' style="background: url('img/ELE_02_05.png')" > </div>
+      <img src='img/ELE_FRAME.png' style='position: absolute;top: 10px;left: 6px;z-index: 1;'>
+      
+      <img class='logo' src='img/ELE_02_01.png' style='position: absolute;top: 40px;left: 46px;z-index: 1;'>
+      
+      <img class='animated fadeInLeft'  id='ele_02_02' src='img/ELE_02_02.png' style='position: absolute;top: 260px;left: 60px;z-index: 1;'>      
+      
+      <img  class='animated fadeIn'  id='ele_02_04' src='img/ELE_02_04.png' style='position: absolute;top: 350px;left: 640px;z-index: 1;'>      
+      
+      <input class='animated fadeIn' type="text" id='input01' style="position: absolute;left: 190px;top: 370px;background: white;width: 200px;padding: 5px;z-index: 9;text-align: center;font-size: 40px;">
+      
+      <img class='animated pulse' id='btn-next' src='img/ELE_02_03.png' style='position: absolute;  left: 190px; top: 450px; z-index: 9;display: none' onclick='nextBUTTON()'> 
+    </div>
+    
+    <div class="page" bsq-id="3">
+      <div class="background" style="background: url('img/ELE_02_05.png')"> </div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">
+      
+      <img class="logo" src="img/ELE_02_01.png" style="position: absolute;top: 40px;left: 46px;z-index: 1;">
+      
+      <img id="ele_03_01" src="img/ELE_03_01.png" style="position: absolute;top: 220px;left: 50px;z-index: 1;">
+      
+      <img id="ele_03_02" src="img/ELE_03_02.png" style="position: absolute;top: 410px;left: 30px;z-index: 1;">      
+      
+      
+      <img id="dream_10" src="img/ELE_03_04.png" style="position: absolute;top: 120px;right: 180px;z-index: 1;">
+      <img id="dream_01" src="img/ELE_03_08.png" style="position: absolute;top: 250px;right: 110px;z-index: 1;">
+      <img id="dream_02" src="img/ELE_03_05.png" style="position: absolute;top: 70px;right: 80px;z-index: 1;">
+      <img id="dream_03" src="img/ELE_03_09.png" style="position: absolute;top: 410px;right: 160px;z-index: 1;">
+      <img id="dream_04" src="img/ELE_03_10.png" style="position: absolute;top: 370px;right: 30px;z-index: 1;">
+      <img id="dream_05" src="img/ELE_03_07.png" style="position: absolute;top: 270px;right: 260px;z-index: 1;">
+      <img id="dream_07" src="img/ELE_03_06.png" style="position: absolute;top: 165px;right: 30px;z-index: 1;">
+      <img id="dream_08" src="img/ELE_03_12.png" style="position: absolute;top: 490px;right: 60px;z-index: 1;">
+      <img id="dream_09" src="img/ELE_03_11.png" style="position: absolute;top: 600px;right: 140px;z-index: 1;">      
+      
+      
+      
+      <img class='animated fadeIn delay1s'  src="img/ELE_02_03.png" style="position: absolute;  left: 210px; top: 320px; z-index: 9;" onclick="nextBUTTON()"> 
+    </div>
+    
+    <div class="page" bsq-id="4">
+      <div class="background" style="background: url('img/ELE_02_05.png')"> </div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">      
+      <img class="logo" src="img/ELE_02_01.png" style="position: absolute;top: 40px;left: 46px;z-index: 1;">
+      
+      <img  class='animated fadeInLeft' id="ele_04_01" src="img/ELE_04_01.png" style="position: absolute;top: 260px;left: 60px;z-index: 1;">      
+      
+      <img class='animated fadeInRight delay1s' id="question_01" src="img/ELE_04_02.png" style="position: absolute;top: 70px;right: 250px;z-index: 1;" onclick='wrong()'>
+      <img class='animated fadeInRight delay1s' id="question_02" src="img/ELE_04_03.png" style="position: absolute;top: 270px;right: 30px;z-index: 1;" onclick='wrong()'>
+      <img class='animated fadeInRight delay1s' class='animated fadeInRight' id="question_03" src="img/ELE_04_04.png" style="position: absolute;top: 165px;right: 130px;z-index: 1;" onclick='nextBUTTON()'>
+      <img class='animated fadeInRight delay1s' id="question_04" src="img/ELE_04_05.png" style="position: absolute;top: 280px;right: 320px;z-index: 1;" onclick='wrong()'>
+      <img class='animated fadeInRight delay1s' id="question_05" src="img/ELE_04_06.png" style="position: absolute;top: 50px;right: 60px;z-index: 1;" onclick='wrong()'>      
+      
+      <img id="ele_02_04" src="img/ELE_02_04.png" style="position: absolute;top: 350px;left: 640px;z-index: 1;">            
+      
+    </div>
+    
+    <div class="page" bsq-id="5" style="display: block;">
+      <div class="background" style="background: url('img/ELE_02_05.png')"> </div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">      
+      <img class="logo" src="img/ELE_02_01.png" style="position: absolute;top: 40px;left: 46px;z-index: 1;">
+      
+      <img id="ele_08_01" class='animated zoomIn' src="img/ELE_08_01.png" style="position: absolute;top: 260px;left: 280px;z-index: 1;">                  
+      
+      
+      <img class='animated fadeIn delay1s' src="img/ELE_02_03.png" style="position: absolute;left: 460px;top: 500px; z-index: 9;" onclick="nextBUTTON()"> 
+    </div>
+    
+    <div class="page" bsq-id="6">
+      <div class="background" style="background: url('img/ELE_02_05.png')"> </div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">      
+      <img class="logo" src="img/ELE_02_01.png" style="position: absolute;top: 40px;left: 46px;z-index: 1;">
+      
+      <img class='animated fadeInLeft' id="ele_05_01" src="img/ELE_05_01.png" style="position: absolute;top: 260px;left: 60px;z-index: 1;">      
+      
+      <img id="question_01" src="img/ELE_04_02.png" style="position: absolute;top: 70px;right: 250px;z-index: 1;opacity: 0.5">
+      <img id="question_02" src="img/ELE_04_03.png" style="position: absolute;top: 270px;right: 30px;z-index: 1;opacity: 0.5">
+      <img id="question_03" class='animated bounceIn' src="img/ELE_04_04.png" style="position: absolute;top: 165px;right: 130px;z-index: 1;">
+      <img id="question_04" src="img/ELE_04_05.png" style="position: absolute;top: 280px;right: 320px;z-index: 1;opacity: 0.5">
+      <img id="question_05" src="img/ELE_04_06.png" style="position: absolute;top: 50px;right: 60px;z-index: 1;opacity: 0.5">      
+      
+      <img id="ele_02_04" src="img/ELE_02_04.png" style="position: absolute;top: 350px;left: 640px;z-index: 1;">            
+      <img class='animated fadeIn delay1s' src="img/ELE_02_03.png" style="position: absolute;  left: 230px; top: 400px; z-index: 9;" onclick="nextBUTTON()"> 
+    </div>
+    
+    <div class="page" bsq-id="7" >
+      <div class="background" style="background: url('img/ELE_02_05.png')"> </div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">      
+      <img class="logo" src="img/ELE_02_01.png" style="position: absolute;top: 40px;left: 46px;z-index: 1;">
+      
+      <img  class='animated zoomIn' id="ele_06_01" src="img/ELE_06_01.png" style="position: absolute;top: 170px;left: 140px;z-index: 1;">           
+      
+      
+      <img id="ele_02_04" src="img/ELE_02_04.png" style="position: absolute;top: 350px;left: 640px;z-index: 1;">            
+      <img class='animated fadeIn delay1s' src="img/ELE_02_03.png" style="position: absolute;left: 440px;top: 310px; z-index: 9;" onclick="nextBUTTON()"> 
+    </div>
+    
+    <div class="page" bsq-id="8">
+      <div class="background" style="background: url('img/ELE_02_05.png')"> </div>
+      <img src="img/ELE_FRAME.png" style="position: absolute;top: 6px;left: 10px;z-index: 1;">      
+      
+      
+      <img id="ele_07_01"  class='animated slideInRight' src="img/ELE_07_01.png" style="position: absolute;top: 220px;right: -20px;z-index: 1;">
+      <img id="ele_07_02"  class='animated fadeIn delay1s' src="img/ELE_07_02.png" style="position: absolute;top: 60px;left: 22px;z-index: 1;">           
+      
+      
+      
+      <img src="img/ELE_02_03.png" class='animated fadeIn delay2s' style="position: absolute;left: 780px;top: 660px; z-index: 9;" onclick="restartApp()"> 
+    </div>
+    
+    
+    <div class='bsq-hidden-button' onclick='restartApp()'></div>
+    
+  </div>
+  
+  <script src='js/game.js?89'></script>
+ 
+</body>
+
+</html>
